@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Articulo, Post
 from django.views import View
+from .forms import ArticuloForm
 
 
 # Create your views here.
@@ -43,3 +44,18 @@ def leer_articulo(request, id):
 
     return render (request, 'articulo_individual.html', context)
 
+# crear articulo!
+
+def crear_articulo(request):
+     if request.method == 'POST':
+         form = ArticuloForm(request.POST, request.FILES)
+         if form.is_valid():
+          form.save()
+         return render (request, 'articulo.html') 
+     else: 
+         form = ArticuloForm()
+         return render(request, 'publicar.html', {'form' : form})        
+     
+
+
+    
