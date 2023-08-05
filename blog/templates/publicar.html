@@ -3,19 +3,37 @@
 {% load static %}
 {% block content %}
 
+<html>
+<head>
+    <title>Publica un articulo!</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/delfina.css' %}">
+
+</head>
+<body>
+
+    <div stclass="card-block">
+       <h2 class="card-title"> {{ articulos.titulo | capfirst }}</h2>    <!--codigo html articulo movido-->
+       <h2 class="card-title"></a>Hola! Publica un articulo aqui! </h2>
+       <h4 class="card-text" style="font-size: 18px;">"{{ articulos.resumen | capfirst }}"</h4>
+       <!--<h2 class="card-title"></a>Contenido:</h2>
+       <h4 class="card-text" style="font-size: 22px;">"{{ articulos.contenido | capfirst }}"</h4>-->
+     <div class="metafooter">
+         <div class="wrapfooter">
+            <span class="meta-footer-thumb">
+        </div>       
+     </div>
+   </div>
+
+   
+       <!--este es el boton de publicar articulo-->
+  <form method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+     {{ form.as_p }}
+     <button type="submit" class="custom-button">Publicar</button>
+  </form>  
 
 
-
-
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Publicar</button>
-</form>  
-
-
-
-
+</body>
+</html>>
 {% endblock %}
 
-<!-- gjedivnewkalsak

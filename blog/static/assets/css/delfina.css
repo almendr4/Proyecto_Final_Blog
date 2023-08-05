@@ -1,0 +1,31 @@
+
+
+.card-block {
+    background-color:rgb(213, 205, 144);
+   
+}
+
+h2.card-title {
+    color:rgb(0, 0, 0);
+}
+
+.card-text {
+    font-size: 30px;
+}
+
+
+/* css para el botón */
+.custom-button {
+    background-color: #586e85; /* fondo */
+    color: white; /* color de texto */
+    border: none;  
+    padding: 10px 20px; /* Relleno interno  */
+    border-radius: 5px; /* Radio de las esquinas */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  }
+  
+  /* Estilos al pasar el ratón sobre el botón */
+  .custom-button:hover {
+    background-color: #9cb9d7; /* Color de fondo al pasar el ratón */
+  }
+  

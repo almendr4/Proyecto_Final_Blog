@@ -33,6 +33,7 @@ def existe_articulo(id):
             return i
     return None
 
+# leer articulo
 def leer_articulo(request, id):
     articulo = Articulo.objects.filter(id = id).first()
         
@@ -56,6 +57,3 @@ def crear_articulo(request):
          form = ArticuloForm()
          return render(request, 'publicar.html', {'form' : form})        
      
-
-
-    

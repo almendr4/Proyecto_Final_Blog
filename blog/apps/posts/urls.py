@@ -18,7 +18,7 @@ urlpatterns = [
     path('articulos/', ArticuloView.as_view(), name='articulos'),
     path('leer_articulo/<int:id>', views.leer_articulo, name='leer_articulo'),
     path('crear_articulo/', views.crear_articulo, name='crear_articulo'),
-
+    
 
 ]
 

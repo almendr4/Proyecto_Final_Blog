@@ -17,20 +17,14 @@
 						<!--ACA VA LA IMAGEN DEL POST -->
 						<img class="img-fluid img-thumb" src="{{ articulos.imagen.url }}" alt="">
 					</a>
-					<div class="card-block">
-						<h2 class="card-title"> {{ articulos.titulo | capfirst }}</h2>
-						<h2 class="card-title"></a>Resumen:</h1>
-						<h4 class="card-text" style="font-size: 18px;">"{{ articulos.resumen | capfirst }}"</h4>
-						<h2 class="card-title"></a>Contenido:</h2>
-						<h4 class="card-text" style="font-size: 22px;">"{{ articulos.contenido | capfirst }}"</h4>
-						<div class="metafooter">
-							<div class="wrapfooter">
-								<span class="meta-footer-thumb">
+					
+					 <!-- actualizo referencia a la otra plantilla html-->
+					  {% include 'publicar.html' %}
 
 									<style>
 										.author-thumb {
 											width: 80px;
-											/* Ajusta el valor según el tamaño deseado */
+											/* Ajusta el valor según el tamaño deseado */ 
 											height: 80px;
 											/* Ajusta el valor según el tamaño deseado */
 										}
