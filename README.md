@@ -1,11 +1,1 @@
-# Grupo 7 :
--Alcides Lisandro	Pourailly
--Axel Damian	Fernandez
--Nicolás Julio	Corrales
--Yeni Nadyria	Gimenez
--Camila	Quintero
--Hugo Ivan	Morales Alarcon
--Leila Mariel	Ibañez
--Emmanuel	Luna José
--Norberto Adrián	Senturión
--Delfina	Gallero
+Comision 2, alumna Delfina Gallero. trabajo final.
