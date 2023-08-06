@@ -70,3 +70,11 @@ class Articulo(models.Model):
         super().delete(using=using, keep_parent=keep_parent)
         # super().delete()
 
+# crear comentario
+class Comment(models.Model):
+    author = models.CharField(max_length=100)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.content

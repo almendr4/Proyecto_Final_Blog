@@ -45,3 +45,5 @@ urlpatterns += staticfiles_urlpatterns()
 # Esto hice para que muestre las imagenes
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

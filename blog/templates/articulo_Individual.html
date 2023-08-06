@@ -54,6 +54,27 @@
 									</a>
 								</span>
 								<a target="_blank" href="#" class="btn subscribe" style="font-size: 1rem; padding: 8px 10px;">Comentar</a>
+								  
+								<form method="post">
+									{% csrf_token %}
+									{{ form.as_p }}
+									<button type="submit">Enviar</button>
+								</form>
+								
+								<title>Lista de Comentarios</title>
+								</head>
+								<body>
+									<h1>Comentarios</h1>
+									<ul>
+										{% for comment in comments %}
+											<li>{{ comment.author }}: {{ comment.content }}</li>
+										{% endfor %}
+									</ul>
+									<a href="{% url 'posts:add_comment' %}">Agregar comentario</a>
+								</body>
+								</html>
+								
+
 							</div>
 
 						</div>

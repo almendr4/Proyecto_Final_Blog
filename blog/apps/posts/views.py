@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Articulo, Post
 from django.views import View
 from .forms import ArticuloForm
-
+from .models import Comment
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -57,3 +58,20 @@ def crear_articulo(request):
          form = ArticuloForm()
          return render(request, 'publicar.html', {'form' : form})        
      
+
+#lista de comentarios
+def comment_list(request):
+    comments = Comment.objects.all()
+    return render(request, 'comment_list.html', {'comments': comments})
+
+
+#agregar coment
+def add_comment(request):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('comment_list')
+    else:
+        form = CommentForm()
+    return render(request, 'add_comment.html', {'form': form})
